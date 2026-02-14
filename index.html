@@ -90,7 +90,7 @@ p{margin-bottom:25px;}
   }
 }
 
-.heart-icon {
+ .heart-icon {
   opacity: 0;
   animation: heartFade 1s forwards 1.4s, glow 2s infinite 2.4s;
 }
@@ -103,6 +103,19 @@ p{margin-bottom:25px;}
   0% { text-shadow: 0 0 5px #ff4e91; }
   50% { text-shadow: 0 0 20px #ff4e91, 0 0 40px #ff4e91; }
   100% { text-shadow: 0 0 5px #ff4e91; }
+} 
+.heart-icon {
+  opacity: 0;
+  animation: heartFade 1s forwards 1.4s, glow 2s infinite 2.4s, beat 1.2s infinite 2.4s;
+  display: inline-block;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
 .button-area{
