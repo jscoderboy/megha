@@ -64,6 +64,46 @@ to{opacity:1; transform:translate(-50%,-50%)}
 
 h1{font-size:2.6rem;margin-bottom:10px;}
 p{margin-bottom:25px;}
+.name {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.letter {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: reveal 0.6s forwards;
+}
+
+.letter:nth-child(1){ animation-delay: 0.2s; }
+.letter:nth-child(2){ animation-delay: 0.4s; }
+.letter:nth-child(3){ animation-delay: 0.6s; }
+.letter:nth-child(4){ animation-delay: 0.8s; }
+.letter:nth-child(5){ animation-delay: 1s; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heart-icon {
+  opacity: 0;
+  animation: heartFade 1s forwards 1.4s, glow 2s infinite 2.4s;
+}
+
+@keyframes heartFade {
+  to { opacity: 1; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff4e91; }
+  50% { text-shadow: 0 0 20px #ff4e91, 0 0 40px #ff4e91; }
+  100% { text-shadow: 0 0 5px #ff4e91; }
+}
 
 .button-area{
 position:relative;
@@ -152,7 +192,16 @@ opacity:0;
 
 <div class="playground">
 <div class="card">
-<h1>Megha ❤️</h1>
+    <h1 class="name">
+        <span class="letter">M</span>
+        <span class="letter">E</span>
+        <span class="letter">G</span>
+        <span class="letter">H</span>
+        <span class="letter">A</span>
+        <span class="heart-icon"> ❤️</span>
+      </h1>
+      
+<!-- <h1>Megha ❤️</h1> -->
 <p>
     I respect where you stand.
 <br>
