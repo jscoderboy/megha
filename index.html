@@ -31,6 +31,35 @@ overflow:hidden;
 50%{background-position:100% 50%}
 100%{background-position:0% 50%}
 }
+.intro{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(-45deg,#ff758c,#ff7eb3,#ff4e91,#ff9ab5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  animation:fadeOutIntro 1.5s ease forwards 2.8s;
+}
+
+.intro-text{
+  font-size:3rem;
+  color:#fff;
+  opacity:0;
+  animation:introReveal 1.5s ease forwards;
+}
+
+@keyframes introReveal{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeOutIntro{
+  to{
+    opacity:0;
+    visibility:hidden;
+  }
+}
 
 .playground{
 position:relative;
@@ -54,7 +83,9 @@ position:absolute;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
-animation:fadeIn 1s ease;
+animation:fadeIn 1s ease 3.2s forwards;
+opacity:0;
+
 }
 
 @keyframes fadeIn{
@@ -202,7 +233,10 @@ opacity:0;
 
 <!-- 🔊 Hidden Music -->
 <audio id="valentineMusic" src="happy-valentine.mp3"></audio>
-
+<div class="intro" id="intro">
+    <h1 class="intro-text">Hi Megha… 💫</h1>
+  </div>
+  
 <div class="playground">
 <div class="card">
     <h1 class="name">
