@@ -1,247 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Megha ❤️</title>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Megha ❤️</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 
-    <style>
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", system-ui, -apple-system, 
-  BlinkMacSystemFont, "Segoe UI", Roboto, 
-  "Apple Color Emoji", "Segoe UI Emoji", 
-  "Noto Color Emoji", sans-serif;
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
 }
 
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff758c,#ff7eb3,#ff4e91,#ff9ab5);
+background-size:400% 400%;
+animation:gradientMove 8s ease infinite;
+overflow:hidden;
+}
 
-      body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #ff758c, #ff7eb3);
-        overflow: hidden;
-      }
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
 
-      .playground {
-        position: relative;
-        width: 100%;
-        max-width: 1100px;
-        height: 100vh;
-        margin: 0 auto;
-      }
-      .card {
-        width: 90%;
-        max-width: 820px;
-        padding: 50px 40px;
-        border-radius: 24px;
-        text-align: center;
-        color: #fff;
-        background-color: #000000ad;
-        /* background:rgba(255,255,255,0.15); */
-        backdrop-filter: blur(15px);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+.playground{
+position:relative;
+width:100%;
+max-width:1100px;
+height:100vh;
+margin:0 auto;
+}
 
-      h1 {
-        font-size: 2.6rem;
-        margin-bottom: 10px;
-      }
+.card{
+width:90%;
+max-width:820px;
+padding:50px 40px;
+border-radius:24px;
+text-align:center;
+color:#fff;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(18px);
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+animation:fadeIn 1s ease;
+}
 
-      p {
-        margin-bottom: 25px;
-      }
+@keyframes fadeIn{
+from{opacity:0; transform:translate(-50%,-40%)}
+to{opacity:1; transform:translate(-50%,-50%)}
+}
 
-      .button-area {
-        position: relative;
-        width: 100%;
-        height: 160px;
-      }
-      button {
-        padding: 14px 38px;
-        font-size: 1.1rem;
-        border-radius: 999px;
-        border: none;
-        cursor: pointer;
-        white-space: nowrap;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-        transition: all 0.25s ease;
-      }
+h1{font-size:2.6rem;margin-bottom:10px;}
+p{margin-bottom:25px;}
 
-      #yesBtn {
-        background: #22c55e;
-        color: #fff;
-        position: absolute;
-        left: 16%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+.button-area{
+position:relative;
+width:100%;
+height:160px;
+}
 
-      #yesBtn:hover {
-        transform: translateY(-50%) scale(1.08);
-      }
+button{
+padding:14px 38px;
+font-size:1.1rem;
+border-radius:999px;
+border:none;
+cursor:pointer;
+white-space:nowrap;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:all 0.3s ease;
+}
 
-      #noBtn {
-        background: #ff3b3b;
-        color: #fff;
-        position: absolute;
-        left: 53%;
-        top: 59%;
-        z-index: 1000;
-      }
+#yesBtn{
+background:#22c55e;
+color:#fff;
+position:absolute;
+left:16%;
+top:50%;
+transform:translateY(-50%);
+}
 
-      .message {
-        display: none;
-        margin-top: 35px;
-        font-size: 1.6rem;
-        animation: pop 0.6s ease forwards;
-      }
+#yesBtn:hover{
+transform:translateY(-50%) scale(1.12);
+box-shadow:0 0 20px #22c55e,0 0 40px #22c55e;
+}
 
-      @keyframes pop {
-        from {
-          opacity: 0;
-          transform: scale(0.7);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
+#noBtn{
+background:#ff3b3b;
+color:#fff;
+position:absolute;
+left:53%;
+top:59%;
+z-index:1000;
+}
 
-      .heart {
-        position: fixed;
-        top: -20px;
-        font-size: 22px;
-        animation: fall linear forwards;
-        pointer-events: none;
-      }
+.message{
+display:none;
+margin-top:35px;
+font-size:1.6rem;
+animation:pop 0.6s ease forwards;
+}
+.mythought{
+    font-size:24px;
+    font-weight: normal;
+    font-style: italic;
+}
 
-      @keyframes fall {
-        to {
-          transform: translateY(110vh);
-          opacity: 0;
-        }
-      }
+@keyframes pop{
+from{opacity:0; transform:scale(0.7)}
+to{opacity:1; transform:scale(1)}
+}
 
-      @media(max-width:576px){
-        .button-area{
-          margin-top:50px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="playground">
-      <div class="card">
-        <h1>Megha ❤️</h1>
-        <p>
-          I respect what you’ve said about not looking for anything. But I’d
-          rather be honest than hide it — I like you. And I’m okay taking things
-          at your pace. ✨
-        </p>
+.heart{
+position:fixed;
+top:-20px;
+font-size:22px;
+animation:fall linear forwards;
+pointer-events:none;
+}
 
-        <h2>Can we explore this… slowly? 💕</h2>
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
 
-        <div class="button-area" id="arena">
-          <button id="yesBtn">Let’s take it slow 💛</button>
-        </div>
+<body>
 
-        <div class="message" id="message">
-          Megha ❤️ That means more than you know. No rush. No pressure. Just two
-          people seeing where something genuine can grow. 🌿✨ Let’s take this
-          one step at a time. 🥰
-        </div>
-      </div>
+<!-- 🔊 Hidden Music -->
+<audio id="valentineMusic" src="happy-valentine.mp3"></audio>
 
-      <button id="noBtn">No 😢</button>
-    </div>
+<div class="playground">
+<div class="card">
+<h1>Megha ❤️</h1>
+<p>
+I respect what you’ve said about not looking for anything. But I’d
+rather be honest than hide it — I like you. And I’m okay taking things
+at your pace. ✨
+</p>
 
-    <script>
-      const noBtn = document.getElementById("noBtn");
-      const yesBtn = document.getElementById("yesBtn");
-      const playground = document.querySelector(".playground");
-      const arena = document.getElementById("arena");
-      const message = document.getElementById("message");
-      function moveNoButton() {
-        const areaRect = playground.getBoundingClientRect();
-        const yesRect = yesBtn.getBoundingClientRect();
+<h2>Can we explore this… slowly? 💕</h2>
 
-        const maxX = areaRect.width - noBtn.offsetWidth;
-        const maxY = areaRect.height - noBtn.offsetHeight;
+<div class="button-area" id="arena">
+<button id="yesBtn">Let’s take it slow 💛</button>
+</div>
 
-        let x,
-          y,
-          overlap = true;
+<div class="message" id="message">
+Megha ❤️ That means more than you know. No rush. No pressure.
+Just two people seeing where something genuine can grow. 🌿✨
+Let’s take this one step at a time. 🥰
+</div>
+</div>
 
-        while (overlap) {
-          x = Math.random() * maxX;
-          y = Math.random() * maxY;
+<button id="noBtn">No 😢</button>
+</div>
 
-          const newLeft = areaRect.left + x;
-          const newTop = areaRect.top + y;
+<script>
+const noBtn=document.getElementById("noBtn");
+const yesBtn=document.getElementById("yesBtn");
+const playground=document.querySelector(".playground");
+const message=document.getElementById("message");
+const music=document.getElementById("valentineMusic");
 
-          overlap = !(
-            newLeft + noBtn.offsetWidth < yesRect.left ||
-            newLeft > yesRect.right ||
-            newTop + noBtn.offsetHeight < yesRect.top ||
-            newTop > yesRect.bottom
-          );
-        }
+function moveNoButton(){
+const areaRect=playground.getBoundingClientRect();
+const yesRect=yesBtn.getBoundingClientRect();
+const maxX=areaRect.width-noBtn.offsetWidth;
+const maxY=areaRect.height-noBtn.offsetHeight;
+let x,y,overlap=true;
 
-        noBtn.style.left = x + "px";
-        noBtn.style.top = y + "px";
-      }
+while(overlap){
+x=Math.random()*maxX;
+y=Math.random()*maxY;
 
-      noBtn.addEventListener("mouseenter", function () {
-        noBtn.style.pointerEvents = "none";
-        moveNoButton();
-        setTimeout(() => {
-          noBtn.style.pointerEvents = "auto";
-        }, 50);
-      });
+const newLeft=areaRect.left+x;
+const newTop=areaRect.top+y;
 
-      noBtn.addEventListener("click", (e) => e.preventDefault());
+overlap=!(
+newLeft+noBtn.offsetWidth<yesRect.left||
+newLeft>yesRect.right||
+newTop+noBtn.offsetHeight<yesRect.top||
+newTop>yesRect.bottom
+);
+}
 
-      yesBtn.addEventListener("click", function () {
-        noBtn.style.display = "none";
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+}
 
-        document.querySelector(".card").innerHTML = `
-    <div class="message" style="display:block;">
-        <h1>Megha ❤️</h1>
-        <br>
-        That means more than you know. <br>
-        No rush. No pressure. <br>
-        Just two people seeing where something genuine can grow. 🌿✨ <br>
-        Let’s take this one step at a time. 🥰
-    </div>
+noBtn.addEventListener("mouseenter",function(){
+noBtn.style.pointerEvents="none";
+moveNoButton();
+setTimeout(()=>{noBtn.style.pointerEvents="auto";},50);
+});
+
+noBtn.addEventListener("click",(e)=>e.preventDefault());
+
+yesBtn.addEventListener("click",function(){
+
+// 🔊 Play Music
+music.play();
+
+noBtn.style.display="none";
+
+document.querySelector(".card").innerHTML=`
+<div class="message" style="display:block;">
+<h1>Megha ❤️</h1><br>
+<p class="mythought">
+When I told you I saw you in my dream…
+I meant it.
+Somewhere along the way, I’ve genuinely started liking you.<br>
+I’m not confused about that. I’m not here to rush you.<br>
+But I’m also not the kind of person who gives up on something that feels right.
+
+If this is growing…
+I’m staying.
+
+Let’s take it step by step. 
+🥰</p>
+</div>
 `;
 
-        dropHearts();
-      });
+dropHearts();
+});
 
-      function dropHearts() {
-        for (let i = 0; i < 30; i++) {
-          const heart = document.createElement("div");
-          heart.className = "heart";
-          heart.innerText = "💖";
-          heart.style.left = Math.random() * 100 + "vw";
-          heart.style.animationDuration = Math.random() * 3 + 3 + "s";
-          document.body.appendChild(heart);
-          setTimeout(() => heart.remove(), 6000);
-        }
-      }
-    </script>
-  </body>
+function dropHearts(){
+for(let i=0;i<30;i++){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerText="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=Math.random()*3+3+"s";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+}
+}
+</script>
+
+</body>
 </html>
